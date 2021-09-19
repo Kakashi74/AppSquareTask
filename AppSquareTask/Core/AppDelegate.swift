@@ -3,7 +3,7 @@
 //  AppSquareTask
 //
 //  Created by Ahmed on 9/6/21.
-//  Copyright © 2021 eramint.com. All rights reserved.
+//  Copyright ©  All rights reserved.
 //
 
 import UIKit

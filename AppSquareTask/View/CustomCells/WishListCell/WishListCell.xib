@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WishListCell" rowHeight="153" id="KGk-i7-Jjw" customClass="WishListCell" customModule="AppSquareTask" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="317" height="153"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="317" height="153"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xNS-4A-fzY">
+                        <rect key="frame" x="0.0" y="0.0" width="317" height="153"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="burger1" translatesAutoresizingMaskIntoConstraints="NO" id="vuo-aN-rCo">
+                                <rect key="frame" x="15" y="10" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="E12-fB-iZA"/>
+                                    <constraint firstAttribute="width" constant="120" id="X0a-HZ-s8c"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etN-SL-Aba">
+                                <rect key="frame" x="145" y="10" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPb-rU-ebj">
+                                <rect key="frame" x="145" y="59.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcB-l0-0NP">
+                                <rect key="frame" x="145" y="109" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="etN-SL-Aba" firstAttribute="top" secondItem="vuo-aN-rCo" secondAttribute="top" id="52r-fi-2Tt"/>
+                            <constraint firstItem="hPb-rU-ebj" firstAttribute="leading" secondItem="vuo-aN-rCo" secondAttribute="trailing" constant="10" id="70q-AI-Nm4"/>
+                            <constraint firstItem="etN-SL-Aba" firstAttribute="leading" secondItem="vuo-aN-rCo" secondAttribute="trailing" constant="10" id="LUX-Vh-5l2"/>
+                            <constraint firstItem="vuo-aN-rCo" firstAttribute="leading" secondItem="xNS-4A-fzY" secondAttribute="leading" constant="15" id="N9H-Jg-0OV"/>
+                            <constraint firstItem="vuo-aN-rCo" firstAttribute="top" secondItem="xNS-4A-fzY" secondAttribute="top" constant="10" id="Tli-Ya-hdu"/>
+                            <constraint firstItem="KcB-l0-0NP" firstAttribute="bottom" secondItem="vuo-aN-rCo" secondAttribute="bottom" id="X03-AM-fyi"/>
+                            <constraint firstItem="hPb-rU-ebj" firstAttribute="centerY" secondItem="vuo-aN-rCo" secondAttribute="centerY" id="uhj-EI-QvH"/>
+                            <constraint firstItem="KcB-l0-0NP" firstAttribute="leading" secondItem="vuo-aN-rCo" secondAttribute="trailing" constant="10" id="vIN-eG-7hO"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="xNS-4A-fzY" secondAttribute="bottom" id="LrL-64-hsD"/>
+                    <constraint firstItem="xNS-4A-fzY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="p6t-aM-dOo"/>
+                    <constraint firstItem="xNS-4A-fzY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="sI5-8p-VC9"/>
+                    <constraint firstAttribute="trailing" secondItem="xNS-4A-fzY" secondAttribute="trailing" id="u9M-0B-c2C"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="FoodDesc" destination="etN-SL-Aba" id="Lbn-Ft-poW"/>
+                <outlet property="FoodName" destination="hPb-rU-ebj" id="fL2-I9-0vb"/>
+                <outlet property="FoodPrice" destination="KcB-l0-0NP" id="jog-NK-S1g"/>
+            </connections>
+            <point key="canvasLocation" x="-36" y="100"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="burger1" width="750" height="562.5"/>
+    </resources>
+</document>
