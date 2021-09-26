@@ -1,9 +1,9 @@
 //
 //  DataBaseManager.swift
-//  AppSquareTask
+//
 //
 //  Created by Ahmed on 9/9/21.
-//  Copyright © 2021 eramint.com. All rights reserved.
+//  Copyright © 2021  All rights reserved.
 import Foundation
 import CoreData
 import UIKit
@@ -12,16 +12,16 @@ import UIKit
 class DataBaseManegar{
     static let sharedDB  = DataBaseManegar()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var favRecipe = [Product]()
+    var favRecipe = [Products]()
     //MARK:- Save To Core Data
     func SaveToFav(model: ProductModel ){
         
-        if fetchFavRecipes().contains(where: {$0.productName == model.name})  {
+        if fetchFavRecipes().contains(where: {$0.productTitle == model.title})  {
              AMToaster.toast("Product already added To Favourite")
             return
         }
-           let favRecipe = NSEntityDescription.insertNewObject(forEntityName: "Product", into: context)
-        favRecipe.setValue(model.name ?? "" , forKey: "productName")
+           let favRecipe = NSEntityDescription.insertNewObject(forEntityName: "Products", into: context)
+        favRecipe.setValue(model.title ?? ""  , forKey: "productTitle")
         favRecipe.setValue(model.price, forKey: "productPrice")
         favRecipe.setValue(model.description, forKey: "productDescription")
            do{
@@ -33,9 +33,9 @@ class DataBaseManegar{
        }
     //MARK:- Remove From Core Data
     func remove( modelAt : ProductModel){
-        guard let modelId =  modelAt.name else {return}
+        guard let modelId =  modelAt.title else {return}
         let Favoitems = fetchFavRecipes()
-        guard let item = Favoitems.first(where: {$0.productName == modelId}) else {return}
+        guard let item = Favoitems.first(where: {$0.productTitle == modelId}) else {return}
         context.delete(item)
         do
         {
@@ -47,9 +47,9 @@ class DataBaseManegar{
         }
     }
     //MARK:- Fetch Core Data
-    func fetchFavRecipes() -> [Product]{
+    func fetchFavRecipes() -> [Products]{
            do{
-            return try context.fetch(Product.fetchRequest()) as! [Product]
+            return try context.fetch(Products.fetchRequest()) as! [Products]
            }catch{
                return []
            }

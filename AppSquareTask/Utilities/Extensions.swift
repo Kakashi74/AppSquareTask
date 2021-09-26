@@ -172,7 +172,7 @@ extension UIViewController {
     func present (identifire : String ) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: identifire)
         vc?.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
-        vc?.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
+        vc?.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         self.present(vc!,animated: true, completion: nil)
     }
     
