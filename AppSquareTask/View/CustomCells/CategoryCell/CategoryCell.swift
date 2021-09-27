@@ -25,7 +25,7 @@ class CategoryCell: UICollectionViewCell {
             labelBackground.backgroundColor = .white
         } else {
             labelLine.isHidden = false
-            labelBackground.backgroundColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 0.198630137)
+            labelBackground.backgroundColor = #colorLiteral(red: 1, green: 0.8588235294, blue: 0.6039215686, alpha: 0.198630137)
         }
         categoryName.text = model.name
     }

@@ -111,7 +111,7 @@ extension HomeVC : UICollectionViewDelegateFlowLayout {
         case self.categortCV :
             return CGSize(width: 90 , height: 40)
         case self.ProductsCV :
-            return CGSize(width: 300 , height: 220)
+            return CGSize(width: 325 , height: 200)
         default :
             return CGSize(width: 35 , height: 35)
         }
@@ -124,18 +124,18 @@ extension HomeVC : UICollectionViewDelegateFlowLayout {
         case self.categortCV :
             return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         case self.ProductsCV :
-            return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+            return UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         default :
             return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+        return 20
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+        return 20
     }
 }
 
@@ -163,4 +163,14 @@ extension HomeVC : UITextFieldDelegate {
         return true
     }
     
+}
+
+
+extension UITabBar {
+
+static func setTransparentTabbar() {
+  UITabBar.appearance().backgroundImage = UIImage()
+  UITabBar.appearance().shadowImage     = UIImage()
+  UITabBar.appearance().clipsToBounds   = true
+ }
 }

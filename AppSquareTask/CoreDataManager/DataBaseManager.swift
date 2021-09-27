@@ -12,16 +12,16 @@ import UIKit
 class DataBaseManegar{
     static let sharedDB  = DataBaseManegar()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var favRecipe = [Products]()
+    var favRecipe = [Product]()
     //MARK:- Save To Core Data
     func SaveToFav(model: ProductModel ){
         
-        if fetchFavRecipes().contains(where: {$0.productTitle == model.title})  {
+        if fetchFavRecipes().contains(where: {$0.productName == model.name})  {
              AMToaster.toast("Product already added To Favourite")
             return
         }
-           let favRecipe = NSEntityDescription.insertNewObject(forEntityName: "Products", into: context)
-        favRecipe.setValue(model.title ?? ""  , forKey: "productTitle")
+           let favRecipe = NSEntityDescription.insertNewObject(forEntityName: "Product", into: context)
+        favRecipe.setValue(model.name ?? ""  , forKey: "productName")
         favRecipe.setValue(model.price, forKey: "productPrice")
         favRecipe.setValue(model.description, forKey: "productDescription")
            do{
@@ -33,9 +33,9 @@ class DataBaseManegar{
        }
     //MARK:- Remove From Core Data
     func remove( modelAt : ProductModel){
-        guard let modelId =  modelAt.title else {return}
+        guard let modelId =  modelAt.name else {return}
         let Favoitems = fetchFavRecipes()
-        guard let item = Favoitems.first(where: {$0.productTitle == modelId}) else {return}
+        guard let item = Favoitems.first(where: {$0.productName == modelId}) else {return}
         context.delete(item)
         do
         {
@@ -47,9 +47,9 @@ class DataBaseManegar{
         }
     }
     //MARK:- Fetch Core Data
-    func fetchFavRecipes() -> [Products]{
+    func fetchFavRecipes() -> [Product]{
            do{
-            return try context.fetch(Products.fetchRequest()) as! [Products]
+            return try context.fetch(Product.fetchRequest()) as! [Product]
            }catch{
                return []
            }

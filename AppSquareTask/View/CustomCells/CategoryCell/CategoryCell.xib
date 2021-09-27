@@ -20,29 +20,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="201" height="69"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4M-RI-KMo">
-                                <rect key="frame" x="0.0" y="0.0" width="201" height="64"/>
+                                <rect key="frame" x="78.5" y="24.5" width="44.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gc8-KP-gpK">
-                                <rect key="frame" x="0.0" y="64" width="30" height="2"/>
+                                <rect key="frame" x="78.5" y="47" width="25" height="1"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="2" id="8hq-Zu-Pe3"/>
-                                    <constraint firstAttribute="width" constant="30" id="UWx-yn-alf"/>
+                                    <constraint firstAttribute="height" constant="1" id="a7k-2V-SDB"/>
+                                    <constraint firstAttribute="width" constant="25" id="bdO-xg-bJ8"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="gc8-KP-gpK" firstAttribute="leading" secondItem="G4M-RI-KMo" secondAttribute="leading" id="4uP-qO-2dr"/>
-                            <constraint firstItem="gc8-KP-gpK" firstAttribute="leading" secondItem="lN1-Jw-iiX" secondAttribute="leading" id="HKL-Ox-x5r"/>
-                            <constraint firstItem="G4M-RI-KMo" firstAttribute="leading" secondItem="lN1-Jw-iiX" secondAttribute="leading" id="Smz-cr-uhV"/>
-                            <constraint firstItem="G4M-RI-KMo" firstAttribute="top" secondItem="lN1-Jw-iiX" secondAttribute="top" id="aij-fJ-KFa"/>
-                            <constraint firstItem="gc8-KP-gpK" firstAttribute="top" secondItem="G4M-RI-KMo" secondAttribute="bottom" id="imi-xN-Wct"/>
-                            <constraint firstAttribute="trailing" secondItem="G4M-RI-KMo" secondAttribute="trailing" id="vky-MZ-oiP"/>
-                            <constraint firstAttribute="bottom" secondItem="G4M-RI-KMo" secondAttribute="bottom" constant="5" id="z72-lc-Wbx"/>
+                            <constraint firstItem="gc8-KP-gpK" firstAttribute="top" secondItem="G4M-RI-KMo" secondAttribute="bottom" constant="2" id="7Kx-Vv-u48"/>
+                            <constraint firstItem="G4M-RI-KMo" firstAttribute="centerX" secondItem="lN1-Jw-iiX" secondAttribute="centerX" id="KFu-dd-t25"/>
+                            <constraint firstItem="gc8-KP-gpK" firstAttribute="leading" secondItem="G4M-RI-KMo" secondAttribute="leading" id="eNo-C1-3CA"/>
+                            <constraint firstItem="G4M-RI-KMo" firstAttribute="centerY" secondItem="lN1-Jw-iiX" secondAttribute="centerY" id="uXg-x4-O8F"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

@@ -12,8 +12,7 @@ class TabBarWithCorners: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBar.clipsToBounds = true
-        tabBar.backgroundImage = UIImage()
-        tabBar.shadowImage = UIImage()
+    
         let layer = CAShapeLayer()
         layer.path = UIBezierPath(roundedRect: CGRect(x: 30, y: tabBar.bounds.minY + 5, width: tabBar.bounds.width - 60, height: tabBar.bounds.height + 10), cornerRadius: (tabBar.frame.width/2)).cgPath
         layer.shadowColor = UIColor.lightGray.cgColor
@@ -30,9 +29,11 @@ class TabBarWithCorners: UITabBarController {
 
         if let items = tabBar.items {
             items.forEach { item in
-                item.imageInsets = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
+                item.imageInsets = .init(top: 12, left: 10, bottom: 10, right: 10)
+                    //UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
             }
         }
+       // tabBar.items?.forEach({ $0.titlePositionAdjustment = UIOffset(horizontal: 0.0, vertical: 0.0) })
 
         tabBar.itemWidth = 30.0
         tabBar.itemPositioning = .fill

@@ -24,14 +24,14 @@ class ProductsCell: UICollectionViewCell {
     
     func ConfigureCell(product : ProductModel){
         if product.isFavourite {
-             isFavBtn.setImage(UIImage(named: "heart"), for: .normal)
+             isFavBtn.setImage(UIImage(named: "Group 34"), for: .normal)
         }else {
-            isFavBtn.setImage(UIImage(named: "like"), for: .normal)
+            isFavBtn.setImage(UIImage(named: "Group 35"), for: .normal)
         }
         self.image.image = UIImage(named: product.image ?? "")
         self.ProductName.text = product.name
         self.ProductDescription.text = product.description
-        self.ProductPrice.text = "\(product.price!)"
+        self.ProductPrice.text = "\(product.price!)$"
     }
     @IBAction func FavBtnPressed(_ sender : Any){
         FavBtn?()
