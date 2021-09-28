@@ -115,7 +115,7 @@
                                     <constraint firstAttribute="height" constant="35" id="fzY-Jc-Lqa"/>
                                 </constraints>
                                 <color key="tintColor" red="0.47450980390000003" green="0.47450980390000003" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" image="shopping-cart"/>
+                                <state key="normal" image="Group 36"/>
                                 <connections>
                                     <action selector="cartBtnPressed:" destination="BPL-GC-V19" eventType="touchUpInside" id="yAv-j2-bXG"/>
                                 </connections>
@@ -404,7 +404,7 @@
                                     <constraint firstAttribute="width" constant="35" id="2mR-ob-Pde"/>
                                     <constraint firstAttribute="height" constant="35" id="bSm-jG-oUA"/>
                                 </constraints>
-                                <state key="normal" image="Group 15837"/>
+                                <state key="normal" image="Group 33-2"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Huy-59-vEo">
                                 <rect key="frame" x="359" y="59" width="35" height="35"/>
@@ -412,7 +412,7 @@
                                     <constraint firstAttribute="width" constant="35" id="esc-il-jg8"/>
                                     <constraint firstAttribute="height" constant="35" id="saf-fp-TQ9"/>
                                 </constraints>
-                                <state key="normal" image="shopping-cart"/>
+                                <state key="normal" image="Group 36"/>
                                 <connections>
                                     <action selector="cartBtnPressed:" destination="RaV-ZH-IAW" eventType="touchUpInside" id="mpE-fJ-3wl"/>
                                 </connections>
@@ -587,8 +587,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Group 15837" width="24" height="24"/>
         <image name="Group 33-1" width="24" height="24"/>
+        <image name="Group 33-2" width="24" height="24"/>
+        <image name="Group 36" width="24" height="24"/>
         <image name="Rect" width="125" height="144"/>
         <image name="arrow.left" catalog="system" width="64" height="48"/>
         <image name="heart" catalog="system" width="64" height="54"/>
